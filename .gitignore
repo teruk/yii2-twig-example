@@ -1,0 +1,39 @@
+# phpstorm project files
+.idea
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer vendor dir
+/vendor
+
+# runtime sub dirs
+/runtime/debug
+/runtime/logs
+/runtime/Twig/cache
+
+# sublime text
+/.phpintel
+yii2twig.sublime-project
+yii2twig.sublime-workspace
+
+# composer itself is not needed
+composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+.bowerrc

@@ -1,0 +1,38 @@
+<!--{{ register_asset_bundle('app/assets/AppAsset') }}-->
+{{ void(this.beginPage()) }}
+<!DOCTYPE html>
+<html lang="{{ app.language }}">
+	<head>
+		<meta charset="{{ app.charset }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ html.encode(this.title) }}</title>
+		{{ html.csrfMetaTags | raw }}
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/site.css">
+		<!--{{ void(this.head) }}-->
+	</head>
+	<body>
+		<!--{{ void(this.beginBody()) }}-->
+
+		<section id="header">
+			{# header content #}
+			{% include '@app/views/layouts/partials/navigation.twig' %}
+		</section>
+		<div class="wrap">
+		<div class="container">
+			{{ content | raw }}
+		</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				{% include '@app/views/layouts/partials/footer.twig' %}
+			</div>
+		</footer>
+		<!--{{ void(this.endBody()) }}-->
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</body>
+</html>
+{{ void(this.endPage()) }}
