@@ -74,7 +74,7 @@ messages
 
 At the moment there are two ways of using the internationalization in the views:
 
-### cookie based 
+#### cookie based 
 
 ```php
 /**
@@ -106,7 +106,7 @@ accessing the cookie in view via cookieGet() (see config/web.php) - navigation.t
 <li class="active"><a href="{{ url.to(['site/index']) }}">{{ t('app/navigation', 'home', null, cookieGet('language', 'en-US')) }}</a></li>
 ```
 
-### passing language variable during view rendering
+#### passing language variable during view rendering
 
 render view and passing language
 ```php
@@ -124,3 +124,12 @@ accessing passed var in view
 <!-- title translated with user language passed by the controller -->
 <h3>{{ t('app', 'About', null, userLanguage) }}</h3>
 ```
+
+Installation
+-------------
+1. clone repository
+2. run composer update
+
+now it should work
+
+Note: on a web server its maybe necessary to configure nginx or .htaccess file
